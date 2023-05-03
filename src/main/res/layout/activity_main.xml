@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/teal_700"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Weather"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:fontFamily="casual"
+        android:textSize="20dp"
+        android:layout_marginTop="0dp"
+            />
+
+        <EditText
+            android:id="@+id/editLatitude"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="30.28"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/editLongitude"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="-97.76"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="casual"
+            android:id="@+id/day0TV"
+            android:text="Today"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/currTempTV"
+                android:text="40"
+                android:textColor="@color/white"
+                android:textSize="40dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="63dp"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_thermostat_24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/humidityTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Humidity"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/currHumidityTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="0%"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/windSpeedTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Wind Speed"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/currWindSpeedTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="0mph"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/directionTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Wind Direction"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/currDirectionTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="°"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:background="@drawable/bottomlayout"
+             android:layout_marginTop="15dp">
+
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_gravity="center"
+                 android:layout_marginTop="20dp"
+                 android:weightSum="4">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="left"
+                     android:layout_marginTop="15dp"
+                     android:layout_weight="1"
+                     android:id="@+id/day1TV"
+                     android:text="Day 1"
+                     android:textColor="@color/white" />
+
+                 <ImageView
+                     android:layout_width="40dp"
+                     android:layout_height="40dp"
+                     android:src="@drawable/ic_baseline_thermostat_24"
+                     android:layout_weight="1"
+                     android:layout_marginLeft="20dp"/>
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/day1TempTV"
+                     android:text="0"
+                     android:layout_gravity="right"
+                     android:layout_weight="1"
+                     android:layout_marginTop="10dp"
+                     android:textColor="@color/white"
+                     android:layout_marginLeft="10dp"/>
+
+             </LinearLayout>
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_gravity="center"
+                 android:layout_marginTop="20dp"
+                 android:weightSum="4">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="left"
+                     android:layout_marginTop="15dp"
+                     android:layout_weight="1"
+                     android:id="@+id/day2TV"
+                     android:text="Day 2"
+                     android:textColor="@color/white" />
+
+                 <ImageView
+                     android:layout_width="40dp"
+                     android:layout_height="40dp"
+                     android:src="@drawable/ic_baseline_thermostat_24"
+                     android:layout_weight="1"
+                     android:layout_marginLeft="20dp"/>
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/day2TempTV"
+                     android:text="12"
+                     android:layout_gravity="right"
+                     android:layout_weight="1"
+                     android:layout_marginTop="10dp"
+                     android:textColor="@color/white"
+                     android:layout_marginLeft="10dp"/>
+
+             </LinearLayout>
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_gravity="center"
+                 android:layout_marginTop="20dp"
+                 android:weightSum="4">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="left"
+                     android:layout_marginTop="15dp"
+                     android:layout_weight="1"
+                     android:id="@+id/day3TV"
+                     android:text="Day 3"
+                     android:textColor="@color/white" />
+
+                 <ImageView
+                     android:layout_width="40dp"
+                     android:layout_height="40dp"
+                     android:src="@drawable/ic_baseline_thermostat_24"
+                     android:layout_weight="1"
+                     android:layout_marginLeft="20dp"/>
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/day3TempTV"
+                     android:text="12"
+                     android:layout_gravity="right"
+                     android:layout_weight="1"
+                     android:layout_marginTop="10dp"
+                     android:textColor="@color/white"
+                     android:layout_marginLeft="10dp"/>
+
+             </LinearLayout>
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_gravity="center"
+                 android:layout_marginTop="20dp"
+                 android:weightSum="4">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="left"
+                     android:layout_marginTop="15dp"
+                     android:layout_weight="1"
+                     android:id="@+id/day4TV"
+                     android:text="Day 4"
+                     android:textColor="@color/white" />
+
+                 <ImageView
+                     android:layout_width="40dp"
+                     android:layout_height="40dp"
+                     android:src="@drawable/ic_baseline_thermostat_24"
+                     android:layout_weight="1"
+                     android:layout_marginLeft="20dp"/>
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/day4TempTV"
+                     android:text="12"
+                     android:layout_gravity="right"
+                     android:layout_weight="1"
+                     android:layout_marginTop="10dp"
+                     android:textColor="@color/white"
+                     android:layout_marginLeft="10dp"/>
+
+             </LinearLayout>
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_gravity="center"
+                 android:layout_marginTop="20dp"
+                 android:weightSum="4">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="left"
+                     android:layout_marginTop="15dp"
+                     android:layout_weight="1"
+                     android:id="@+id/day5TV"
+                     android:text="Day 5"
+                     android:textColor="@color/white" />
+
+                 <ImageView
+                     android:layout_width="40dp"
+                     android:layout_height="40dp"
+                     android:src="@drawable/ic_baseline_thermostat_24"
+                     android:layout_weight="1"
+                     android:layout_marginLeft="20dp"/>
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="12"
+                     android:layout_gravity="right"
+                     android:layout_weight="1"
+                     android:id="@+id/day5TempTV"
+                     android:layout_marginTop="10dp"
+                     android:textColor="@color/white"
+                     android:layout_marginLeft="10dp"/>
+
+             </LinearLayout>
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_gravity="center"
+                 android:layout_marginTop="20dp"
+                 android:weightSum="4">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="left"
+                     android:layout_marginTop="15dp"
+                     android:layout_weight="1"
+                     android:id="@+id/day6TV"
+                     android:text="Day 6"
+                     android:textColor="@color/white" />
+
+                 <ImageView
+                     android:layout_width="40dp"
+                     android:layout_height="40dp"
+                     android:src="@drawable/ic_baseline_thermostat_24"
+                     android:layout_weight="1"
+                     android:layout_marginLeft="20dp"/>
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/day6TempTV"
+                     android:text="12"
+                     android:layout_gravity="right"
+                     android:layout_weight="1"
+                     android:layout_marginTop="10dp"
+                     android:textColor="@color/white"
+                     android:layout_marginLeft="10dp"/>
+
+             </LinearLayout>
+
+         </LinearLayout>
+
+     </LinearLayout>
+
+ </LinearLayout>
